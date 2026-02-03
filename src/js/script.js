@@ -2,11 +2,11 @@
 const defaultConfig = {
     hero_title: 'Ivyson Thauan',
     hero_subtitle: 'Desenvolvedor',
-    hero_description: 'Transformando ideias em soluções escaláveis com Python, Flask e APIs REST',
-    whatsapp_number: '5581999999999',
-    email_address: 'contato@ivysonthauan.dev',
-    github_url: 'https://github.com/ivysonthauan',
-    linkedin_url: 'https://linkedin.com/in/ivysonthauan',
+    hero_description: 'Transformando ideias em soluções escaláveis com Python e Flask',
+    whatsapp_number: '5581992331241',
+    email_address: 'ivysonthauan4@gmail.com',
+    github_url: 'https://github.com/Ivysonin',
+    linkedin_url: 'https://www.linkedin.com/in/ivysonin/',
     background_color: '#0a0a0b',
     surface_color: '#131316',
     text_color: '#f5f5f7',
@@ -192,18 +192,24 @@ sections.forEach(section => {
 // Active nav link highlight
 const navLinks = document.querySelectorAll('.nav-link');
 
-const navObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-    if (entry.isIntersecting) {
-        navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${entry.target.id}`) {
-            link.classList.add('active');
-        }
+const navObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    link.classList.toggle(
+                        'active',
+                        link.getAttribute('href') === `#${entry.target.id}`
+                    );
+                });
+            }
         });
+    },
+    {
+        rootMargin: '-40% 0px -55% 0px',
+        threshold: 0
     }
-    });
-}, { threshold: 0.5 });
+);
 
 sections.forEach(section => {
     navObserver.observe(section);
