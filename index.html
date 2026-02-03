@@ -30,10 +30,10 @@
                     <div class="hidden md:flex items-center gap-8">
                         <a href="#inicio" class="nav-link text-sm font-medium hover:text-red-500 transition-colors">Início</a>
                         <a href="#sobre" class="nav-link text-sm font-medium hover:text-red-500 transition-colors">Sobre</a>
-                        <a href="#skills" class="nav-link text-sm font-medium hover:text-red-500 transition-colors">Skills</a>
+                        <a href="#skills" class="nav-link text-sm font-medium hover:text-red-500 transition-colors">Habilidades</a>
                         <a href="#experiencia" class="nav-link text-sm font-medium hover:text-red-500 transition-colors">Experiência</a>
                         <a href="#projetos" class="nav-link text-sm font-medium hover:text-red-500 transition-colors">Projetos</a>
-                        <a href="#formacao" class="nav-link text-sm font-medium hover:text-red-500 transition-colors">Forma��ão</a>
+                        <a href="#formacao" class="nav-link text-sm font-medium hover:text-red-500 transition-colors">Formação</a>
                         <a href="#contato" class="btn-primary px-5 py-2 rounded-lg text-sm font-semibold">Contato</a>
                     </div>
                     <!-- Mobile Menu Button -->
@@ -50,7 +50,7 @@
                     <nav class="mt-12 flex flex-col gap-4">
                         <a href="#inicio" class="mobile-nav-link py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">Início</a>
                         <a href="#sobre" class="mobile-nav-link py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">Sobre</a>
-                        <a href="#skills" class="mobile-nav-link py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">Skills</a>
+                        <a href="#skills" class="mobile-nav-link py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">Habilidades</a>
                         <a href="#experiencia" class="mobile-nav-link py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">Experiência</a>
                         <a href="#projetos" class="mobile-nav-link py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">Projetos</a>
                         <a href="#formacao" class="mobile-nav-link py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">Formação</a>
@@ -62,35 +62,56 @@
         <main class="relative z-10">
 
             <!-- Hero Section -->
-            <section id="inicio" class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
-                <div class="max-w-4xl mx-auto text-center">
+            <section id="inicio" class="relative min-h-screen flex items-start lg:items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 lg:pt-20">
+                <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-center text-center lg:text-left">
                     <!-- Foto de Perfil -->
-                    <div class="animate-fade-in-up opacity-0 mb-8">
-                        <div class="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-2xl overflow-hidden glow-effect border-2" style="border-color: #dc2626;">
-                            <img id="profile-photo" src="https://via.placeholder.com/300?text=Sua+Foto" alt="Foto de Ivyson Thauan" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Foto não carregada:', this.src); this.style.background='linear-gradient(135deg, #dc2626, #7f1d1d)'; this.alt='Foto não disponível';">
+                    <div class="animate-fade-in-up opacity-0 mb-8 lg:mb-0 lg:ml-12 lg:order-2">
+                        <div class="w-40 h-40 sm:w-48 sm:h-48 lg:w-72 lg:h-72 mx-auto lg:mx-0 rounded-2xl overflow-hidden glow-effect border-2">
+                            <img id="profile-photo" src="src/img/person.jpeg" alt="Foto de Ivyson Thauan" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Foto não carregada:', this.src); this.style.background='linear-gradient(135deg, #dc2626, #7f1d1d)'; this.alt='Foto não disponível';">
                         </div>
                     </div>
-                    <h1 class="animate-fade-in-up opacity-0 stagger-1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"><span id="hero-name" class="block">Ivyson Thauan</span> <span id="hero-role" class="gradient-text">Desenvolvedor</span></h1>
-                    <p id="hero-desc" class="animate-fade-in-up opacity-0 stagger-2 text-lg sm:text-xl md:text-2xl mb-10 max-w-2xl mx-auto" style="color: #a1a1aa;">Transformando ideias em soluções escaláveis com Python, Flask e APIs REST</p>
-                    <div class="animate-fade-in-up opacity-0 stagger-3 flex flex-col sm:flex-row items-center justify-center gap-4"><a href="#projetos" class="btn-primary w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
-                        Ver Projetos </a> <a href="#contato" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-lg border-2 border-red-600 hover:bg-red-600/10 transition-all flex items-center justify-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                        </svg> Fale Comigo </a>
+                    <div class="flex-1">
+                        <h1 class="animate-fade-in-up opacity-0 stagger-1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"><span id="hero-name" class="block">Ivyson Thauan</span> <span id="hero-role" class="gradient-text">Desenvolvedor</span></h1>
+                        <p id="hero-desc" class="animate-fade-in-up opacity-0 stagger-2 text-lg sm:text-xl md:text-2xl mb-10 max-w-xl sm:max-w-2xl mx-auto" style="color: #a1a1aa;">Transformando ideias em soluções escaláveis com Python, Flask e APIs REST</p>
+                        <div class="animate-fade-in-up opacity-0 stagger-3 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="#projetos" class="btn-primary w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center lg:justify-start gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                                Ver Projetos 
+                            </a>
+                            <a href="#contato" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-lg border-2 border-red-600 hover:bg-red-600/10 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(220,38,38,0.4)] transition-all flex items-center justify-center lg:justify-start gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                </svg> Fale Comigo
+                            </a>
+                            <a href="src/docs/Ivyson Thauan.pdf" download class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-lg border-2 border-red-600 hover:bg-red-600/10 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(220,38,38,0.4)] transition-all flex items-center justify-center lg:justify-start gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+                                </svg> Baixar CV
+                            </a>
+                        </div>
+                        <div class="animate-fade-in-up opacity-0 stagger-4 mt-16 flex items-center justify-center lg:justify-start gap-6">
+                            <a id="github-link" href="https://github.com/ivysonthauan" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl hover:bg-white/10 transition-all hover:scale-110" aria-label="GitHub">
+                                <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                            <a id="linkedin-link" href="https://linkedin.com/in/ivysonthauan" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl hover:bg-white/10 transition-all hover:scale-110" aria-label="LinkedIn">
+                                <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </a>
+                            <a id="email-link" href="mailto:contato@ivysonthauan.dev" class="p-3 rounded-xl hover:bg-white/10 transition-all hover:scale-110" aria-label="Email">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="animate-fade-in-up opacity-0 stagger-4 mt-16 flex items-center justify-center gap-6"><a id="github-link" href="https://github.com/ivysonthauan" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl hover:bg-white/10 transition-all hover:scale-110" aria-label="GitHub">
-                        <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg></a> <a id="linkedin-link" href="https://linkedin.com/in/ivysonthauan" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl hover:bg-white/10 transition-all hover:scale-110" aria-label="LinkedIn">
-                        <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                        </svg></a> <a id="email-link" href="mailto:contato@ivysonthauan.dev" class="p-3 rounded-xl hover:bg-white/10 transition-all hover:scale-110" aria-label="Email">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg></a>
-                    </div>
-                    <!-- Scroll Indicator -->
-                    <div class="animate-fade-in-up opacity-0 stagger-5 mt-20"><a href="#sobre" class="inline-flex flex-col items-center gap-2 text-sm opacity-60 hover:opacity-100 transition-opacity"> <span>Scroll</span>
-                        <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                        </svg></a>
-                    </div>
+                </div>
+                <!-- Scroll Indicator -->
+                <div class="hidden sm:flex absolute left-1/2 -translate-x-1/2 bottom-10 animate-fade-in-up opacity-0 stagger-5">
+                    <a href="#sobre" class="inline-flex flex-col items-center gap-2 text-sm opacity-60 hover:opacity-100 transition-opacity">
+                        <span>Scroll</span>
+                        <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
                 </div>
             </section>
 
@@ -137,7 +158,7 @@
                                             <span style="color: #c084fc;">return</span> <span style="color: #a1a1aa;">[</span>
                                         </div>
                                         <div class="pl-4"><span style="color: #4ade80;">"Python"</span><span style="color: #a1a1aa;">,</span> <span style="color: #4ade80;">"Flask"</span><span style="color: #a1a1aa;">,</span></div>
-                                        <div class="pl-4"><span style="color: #4ade80;">"APIs REST"</span><span style="color: #a1a1aa;">,</span> <span style="color: #4ade80;">"SQL"</span></div>
+                                        <div class="pl-4"><span style="color: #4ade80;">"PostgreSQL"</span><span style="color: #a1a1aa;">,</span> <span style="color: #4ade80;">"Git"</span></div>
                                         <div>
                                             <span style="color: #a1a1aa;">]</span>
                                         </div>
@@ -149,7 +170,7 @@
                         <!-- About Content -->
                         <div class="order-1 lg:order-2">
                             <span class="inline-block font-mono text-sm px-4 py-2 rounded-full mb-6" style="background: rgba(220, 38, 38, 0.15); border: 1px solid rgba(220, 38, 38, 0.3); color: #f87171;"> // Sobre Mim </span>
-                            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Construindo o <span class="gradient-text">futuro digital</span></h2>
+                            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Construindo lógica, <span class="gradient-text">Criando impacto</span></h2>
                             <div class="space-y-4 text-base sm:text-lg" style="color: #a1a1aa;">
                                 <p>Sou desenvolvedor Back-end com mais de <strong class="text-white">1 ano de experiência prática</strong> em Python e Flask. Minha jornada começou pela curiosidade de entender como sistemas funcionam por trás das interfaces.</p>
                                 <p>Atuo no desenvolvimento de <strong class="text-white">sistemas CRUD, APIs REST e projetos próprios</strong>, incluindo uma API voltada para agendamentos. Cada linha de código que escrevo tem um propósito: resolver problemas reais.</p>
@@ -166,7 +187,7 @@
                                 </div>
                                 <div class="p-4 rounded-xl" style="background: #131316;">
                                     <div class="text-2xl sm:text-3xl font-bold gradient-text">
-                                        5+
+                                        10+
                                     </div>
                                     <div class="text-sm" style="color: #a1a1aa;">
                                         Projetos entregues
@@ -191,7 +212,6 @@
                 <div class="max-w-6xl mx-auto">
                     <div class="text-center mb-16">
                         <span class="inline-block font-mono text-sm px-4 py-2 rounded-full mb-6" style="background: rgba(220, 38, 38, 0.15); border: 1px solid rgba(220, 38, 38, 0.3); color: #f87171;"> // Habilidades </span>
-                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">Stack <span class="gradient-text">Técnica</span></h2>
                     </div>
                     <div class="grid lg:grid-cols-2 gap-12">
                         <!-- Habilidades Técnicas -->
@@ -200,29 +220,28 @@
                             <svg class="w-5 h-5" style="color: #f87171;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                             </svg></span> Habilidades Técnicas</h3>
                             <div class="space-y-3">
-                                <div class="flex flex-wrap gap-2"><span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">
-                                    <svg class="w-4 h-4" style="color: #3b82f6;" viewbox="0 0 128 128">
-                                        <path fill="currentColor" d="M49.33 62h29.159C86.606 62 93 55.132 93 46.981V19.183c0-7.912-6.632-13.856-14.555-15.176-5.014-.835-10.195-1.215-15.187-1.191-4.99.023-9.612.448-13.805 1.191C37.098 6.188 35 10.758 35 19.183V30h29v4H23.776c-8.484 0-15.914 5.108-18.237 14.811-2.681 11.12-2.8 18.062 0 29.674C7.473 86.746 12.545 93 21.039 93H32V79.952c0-9.659 8.352-18.171 18.33-18.171zm-1.838-39.11c-3.026 0-5.478-2.479-5.478-5.545 0-3.079 2.451-5.581 5.478-5.581 3.015 0 5.479 2.502 5.479 5.581-.001 3.066-2.465 5.545-5.479 5.545zm74.789 25.921C120.183 40.363 116.178 34 107.682 34H97v12.981C97 57.031 88.468 67 78.67 67H49.512C41.63 67 35 73.582 35 81.501v27.798c0 7.912 6.879 12.564 14.555 14.852 9.178 2.737 17.989 3.23 29.021 0C85.109 121.958 93 117.929 93 109.299V99H64v-4h43.776c8.484 0 11.647-5.923 14.555-14.811 2.997-9.168 2.87-17.985 0-29.378zM82.43 95.234c3.026 0 5.478 2.479 5.478 5.545 0 3.078-2.452 5.581-5.478 5.581-3.015 0-5.478-2.503-5.478-5.581-.001-3.066 2.463-5.545 5.478-5.545z" />
-                                    </svg> Python </span> <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">
-                                    <svg class="w-4 h-4" style="color: #10b981;" fill="currentColor" viewbox="0 0 24 24">
-                                        <path d="M7.172 20.36c-.904-.218-1.286-.782-1.366-1.155-.083-.389.04-.918.388-1.322l5.37-6.246-5.387-6.267c-.348-.404-.465-.933-.382-1.322.081-.373.463-.937 1.367-1.155 1.107-.267 2.259.15 2.882.987l4.012 5.387 3.993-5.376c.626-.843 1.78-1.26 2.884-.987.904.217 1.286.782 1.367 1.154.082.39-.035.918-.383 1.323l-5.368 6.255 5.385 6.258c.348.404.465.933.383 1.322-.082.373-.464.937-1.368 1.155-1.104.267-2.258-.144-2.883-.987l-4.01-5.387-3.992 5.375c-.625.844-1.78 1.26-2.883.988z" />
-                                    </svg> Flask </span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">Python</span> 
+                                    <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">Flask</span>
+                                    <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">Java</span>
+                                    <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">Spring</span>
+                                    <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">Node.js</span>
                                 </div>
-                                <div class="flex flex-wrap gap-2"><span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">
-                                    <svg class="w-4 h-4" style="color: #eab308;" viewbox="0 0 128 128">
-                                        <path fill="currentColor" d="M2 1v125h125V1H2zm66.119 106.513c-1.845 3.749-5.367 6.212-9.448 7.401-6.271 1.44-12.269.619-16.731-2.059-2.986-1.832-5.318-4.652-6.901-7.901l9.52-5.83c.083.035.333.487.667 1.071 1.214 2.034 2.261 3.474 4.319 4.485 2.022.69 6.461 1.131 8.175-2.427 1.047-1.81.714-7.628.714-14.065C58.433 78.073 58.48 68 58.48 58h11.709c0 11 .06 21.418 0 32.152.039 6.811.596 13.233-2.07 17.361zm62.768-11.152c-2.725 5.089-7.468 8.418-13.426 9.746-7.612 1.251-14.604-.255-19.54-4.931-2.652-2.498-4.391-5.324-5.496-8.913l9.943-5.327c1.694 3.551 3.32 5.757 6.353 7.329 3.188 1.122 8.288 1.413 10.785-1.516 1.329-1.729 1.498-4.833.092-6.98-1.198-1.592-2.869-2.492-5.954-3.735l-6.017-2.315C101.42 74.26 96.733 68.197 96.262 59c-.268-6.369 1.774-11.777 6.054-14.985 3.225-2.358 6.655-3.375 10.998-3.855 5.219-.329 9.378 1.026 13.085 3.553 2.611 1.788 4.329 4.136 5.705 7.065l-9.478 5.549c-.837-1.815-1.609-2.976-2.911-4.113-2.683-1.877-7.436-1.668-9.249 1.312-1.074 1.775-1.02 4.652.06 6.455.926 1.238 2.797 2.318 5.313 3.326l5.792 2.313c5.808 2.454 10.088 5.667 11.976 10.558 2.067 5.776.942 13.779-2.72 19.52z" />
-                                    </svg> JavaScript </span> <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">
-                                    <svg class="w-4 h-4" style="color: #06b6d4;" fill="currentColor" viewbox="0 0 24 24">
-                                        <path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4zM4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4zm0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4z" />
-                                    </svg> SQL </span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">HTML</span>
+                                    <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">CSS</span>
+                                    <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">JavaScript</span>
+                                    <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">Bootstrap</span>
+                                    <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">TailwindCSS</span>
                                 </div>
-                                <div class="flex flex-wrap gap-2"><span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">
-                                    <svg class="w-4 h-4" style="color: #f97316;" fill="currentColor" viewbox="0 0 24 24">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                    </svg> Git/GitHub </span> <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">
-                                    <svg class="w-4 h-4" style="color: #a855f7;" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                    </svg> APIs REST </span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">PostgreSQL</span>
+                                    <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">SQLite</span>
+                                    <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">SupaBase</span>
+                                </div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">Git/GitHub</span> 
+                                    <span class="project-tag px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">Linux</span>
                                 </div>
                             </div>
                         </div>
@@ -234,48 +253,22 @@
                             </svg></span> Habilidades Interpessoais</h3>
                             <div class="grid grid-cols-2 gap-3 mb-4">
                                 <div class="p-3 rounded-lg card-hover" style="background: rgba(220, 38, 38, 0.1); border: 1px solid rgba(220, 38, 38, 0.2);">
-                                    <div class="text-lg mb-1">
-                                        💬
-                                    </div>
-                                    <p class="font-semibold text-xs">Comunicação</p>
+                                    <p class="font-semibold text-xs">Trabalho em equipe</p>
                                 </div>
                                 <div class="p-3 rounded-lg card-hover" style="background: rgba(220, 38, 38, 0.1); border: 1px solid rgba(220, 38, 38, 0.2);">
-                                    <div class="text-lg mb-1">
-                                        💡
-                                    </div>
-                                    <p class="font-semibold text-xs">Criatividade</p>
+                                    <p class="font-semibold text-sm">Boa comunicação</p>
                                 </div>
                                 <div class="p-3 rounded-lg card-hover" style="background: rgba(220, 38, 38, 0.1); border: 1px solid rgba(220, 38, 38, 0.2);">
-                                    <div class="text-lg mb-1">
-                                        ⏰
-                                    </div>
-                                    <p class="font-semibold text-xs">Gestão de Tempo</p>
+                                    <p class="font-semibold text-xs">Resolução de problemas</p>
                                 </div>
                                 <div class="p-3 rounded-lg card-hover" style="background: rgba(220, 38, 38, 0.1); border: 1px solid rgba(220, 38, 38, 0.2);">
-                                    <div class="text-lg mb-1">
-                                        🎯
-                                    </div>
-                                    <p class="font-semibold text-xs">Foco em Resultados</p>
+                                    <p class="font-semibold text-xs">Responsabilidade e Organização</p>
                                 </div>
                                 <div class="p-3 rounded-lg card-hover" style="background: rgba(220, 38, 38, 0.1); border: 1px solid rgba(220, 38, 38, 0.2);">
-                                    <div class="text-lg mb-1">
-                                        🔄
-                                    </div>
                                     <p class="font-semibold text-xs">Adaptabilidade</p>
                                 </div>
                                 <div class="p-3 rounded-lg card-hover" style="background: rgba(220, 38, 38, 0.1); border: 1px solid rgba(220, 38, 38, 0.2);">
-                                    <div class="text-lg mb-1">
-                                        📚
-                                    </div>
-                                    <p class="font-semibold text-xs">Aprendizado Contínuo</p>
-                                </div>
-                            </div>
-                            <div class="p-4 rounded-lg" style="background: rgba(220, 38, 38, 0.05); border: 1px solid rgba(220, 38, 38, 0.1);">
-                                <div class="flex items-center gap-3"><span class="text-2xl">🌐</span>
-                                    <div>
-                                        <p class="font-semibold text-sm">Inglês Técnico</p>
-                                        <p class="text-xs" style="color: #a1a1aa;">Documentação &amp; comunicação</p>
-                                    </div>
+                                    <p class="font-semibold text-xs">Design thinking</p>
                                 </div>
                             </div>
                         </div>
@@ -290,6 +283,44 @@
                         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">Experiência <span class="gradient-text">Profissional</span></h2>
                     </div>
                     <div class="space-y-8">
+                        <!-- Freelancer -->
+                        <div class="relative pl-8 sm:pl-10">
+                            <div class="timeline-line"></div>
+                            <div class="timeline-dot"></div>
+                            <div class="gradient-border rounded-2xl p-6 sm:p-8 card-hover" style="background: #131316;">
+                                <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                                    <div>
+                                        <h3 class="text-xl sm:text-2xl font-bold">Desenvolvedor Freelancer</h3>
+                                        <p class="font-mono text-sm" style="color: #f87171;">Desenvolvimento de Software</p>
+                                    </div>
+                                    <span class="px-4 py-1 rounded-full text-sm font-mono" style="background: rgba(220, 38, 38, 0.2); color: #f87171;">2026</span>
+                                </div>
+                                <p class="mb-4" style="color: #a1a1aa;">Criação de soluções sob demanda para pequenas empresas e empreendedores locais.</p>
+                                <ul class="space-y-2 mb-4" style="color: #a1a1aa;">
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22c55e;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg> Automação de processos empresariais
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22c55e;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg> Landing page
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22c55e;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg> Sistemas CRUD personalizados
+                                    </li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Python</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Flask</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">HTML</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">CSS</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Javascript</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Git/Github</span>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Hackathon -->
                         <div class="relative pl-8 sm:pl-10">
                             <div class="timeline-line"></div>
@@ -298,7 +329,7 @@
                                 <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
                                     <div>
                                         <h3 class="text-xl sm:text-2xl font-bold">Hackathon "Fortalecendo a Economia do Agreste"</h3>
-                                        <p class="font-mono text-sm" style="color: #f87171;">Participante / Desenvolvedor</p>
+                                        <p class="font-mono text-sm" style="color: #f87171;">Participante</p>
                                     </div>
                                     <span class="px-4 py-1 rounded-full text-sm font-mono" style="background: rgba(220, 38, 38, 0.2); color: #f87171;">2025</span>
                                 </div>
@@ -318,45 +349,7 @@
                                     </li>
                                 </ul>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Python</span>
-                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Flask</span>
-                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">APIs</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Freelancer -->
-                        <div class="relative pl-8 sm:pl-10">
-                            <div class="timeline-line"></div>
-                            <div class="timeline-dot"></div>
-                            <div class="gradient-border rounded-2xl p-6 sm:p-8 card-hover" style="background: #131316;">
-                                <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
-                                    <div>
-                                        <h3 class="text-xl sm:text-2xl font-bold">Desenvolvedor Freelancer</h3>
-                                        <p class="font-mono text-sm" style="color: #f87171;">Desenvolvimento de Software</p>
-                                    </div>
-                                    <span class="px-4 py-1 rounded-full text-sm font-mono" style="background: rgba(220, 38, 38, 0.2); color: #f87171;">2024 - Atual</span>
-                                </div>
-                                <p class="mb-4" style="color: #a1a1aa;">Criação de soluções sob demanda para pequenas empresas e empreendedores locais.</p>
-                                <ul class="space-y-2 mb-4" style="color: #a1a1aa;">
-                                    <li class="flex items-start gap-2">
-                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22c55e;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg> Sistemas CRUD personalizados
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22c55e;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg> APIs REST para integração de sistemas
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22c55e;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg> Automação de processos empresariais
-                                    </li>
-                                </ul>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Python</span>
-                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Flask</span>
-                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">SQL</span>
-                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Git</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Design thinking</span>
                                 </div>
                             </div>
                         </div>
@@ -372,70 +365,28 @@
                         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">Projetos <span class="gradient-text">em Destaque</span></h2>
                     </div>
                     <div class="grid md:grid-cols-2 gap-8">
-                        <!-- Projeto 1 - API de Agendamentos -->
+                        <!-- Projeto 1 - Agendamentos de Nails Designer -->
                         <div class="gradient-border rounded-2xl overflow-hidden card-hover" style="background: #131316;">
-                            <div class="h-48 relative overflow-hidden" style="background: linear-gradient(135deg, #131316, #1f1f24);">
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <svg class="w-24 h-24 opacity-20" style="color: #dc2626;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                                </div>
-                                <div class="absolute top-4 right-4">
-                                    <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold" style="background: #22c55e; color: #fff;">Em Desenvolvimento</span>
+                            <div class="h-48 relative overflow-hidden">
+                                <img  src="src/img/projetos/agendamento.jpeg" alt="Sistema de Agendamento de Nails Designer" class="w-full h-full object-cover"/>
+                                <!-- overlay sutil pra manter identidade -->
+                                <div class="absolute inset-0 bg-black/40"></div>
+                                <!-- badge continua -->
+                                <div class="absolute top-4 right-4 z-10">
+                                    <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold"
+                                        style="background: #3b82f6; color: #fff;">
+                                        Concluído
+                                    </span>
                                 </div>
                             </div>
                             <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2">API de Agendamentos</h3>
-                                <p class="text-sm mb-4" style="color: #a1a1aa;">Sistema completo de agendamentos com autenticação, gerenciamento de horários e notificações. Arquitetura REST seguindo boas práticas.</p>
+                                <h3 class="text-xl font-bold mb-2">Agendamento de Nails Designer</h3>
+                                <p class="text-sm mb-4" style="color: #a1a1aa;">Sistema completo de agendamento de serviços de manicure, desenvolvido para nail designer individual, com fluxo otimizado para atendimento solo e serviços de duração semelhante.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Python</span>
                                     <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Flask</span>
-                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">SQLite</span>
-                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">JWT</span>
-                                </div>
-                                <div class="flex gap-3"><a href="https://github.com/ivysonthauan" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all hover:bg-white/10" style="border: 1px solid rgba(255,255,255,0.2);">
-                                    <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                    </svg> Código </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Projeto 2 - Sistema CRUD -->
-                        <div class="gradient-border rounded-2xl overflow-hidden card-hover" style="background: #131316;">
-                            <div class="h-48 relative overflow-hidden" style="background: linear-gradient(135deg, #131316, #1f1f24);">
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <svg class="w-24 h-24 opacity-20" style="color: #dc2626;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" /></svg>
-                                </div>
-                                <div class="absolute top-4 right-4">
-                                    <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold" style="background: #3b82f6; color: #fff;">Concluído</span>
-                                </div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2">Sistema de Gestão CRUD</h3>
-                                <p class="text-sm mb-4" style="color: #a1a1aa;">Sistema completo de cadastro e gerenciamento com validações, filtros avançados e exportação de dados. Interface intuitiva e responsiva.</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Python</span> <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Flask</span> <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">SQL</span> <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Bootstrap</span>
-                                </div>
-                                <div class="flex gap-3"><a href="https://github.com/ivysonthauan" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all hover:bg-white/10" style="border: 1px solid rgba(255,255,255,0.2);">
-                                    <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                    </svg> Código </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Projeto 3 - Solução Hackathon -->
-                        <div class="gradient-border rounded-2xl overflow-hidden card-hover" style="background: #131316;">
-                            <div class="h-48 relative overflow-hidden" style="background: linear-gradient(135deg, #131316, #1f1f24);">
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <svg class="w-24 h-24 opacity-20" style="color: #dc2626;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                                </div>
-                                <div class="absolute top-4 right-4">
-                                    <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold" style="background: #eab308; color: #000;">Hackathon</span>
-                                </div>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2">Proteção Digital para Comerciantes</h3>
-                                <p class="text-sm mb-4" style="color: #a1a1aa;">Solução desenvolvida no Hackathon para prevenção de golpes digitais no comércio têxtil do Agreste pernambucano.</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Python</span> <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Flask</span> <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">API</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">PostgreSQL</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">APScheduler</span>
                                 </div>
                                 <div class="flex gap-3">
                                     <span class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold" style="color: #a1a1aa;">
@@ -444,26 +395,152 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Projeto 4 - Portfólio -->
+                        <!-- Projeto 2 - CondoConnect -->
                         <div class="gradient-border rounded-2xl overflow-hidden card-hover" style="background: #131316;">
-                            <div class="h-48 relative overflow-hidden" style="background: linear-gradient(135deg, #131316, #1f1f24);">
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <svg class="w-24 h-24 opacity-20" style="color: #dc2626;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
-                                </div>
+                            <div class="h-48 relative overflow-hidden">
+                                <img  src="src/img/projetos/CondoConnect.png" alt="Sistema condominial" class="w-full h-full object-cover"/>
+                                <!-- overlay sutil pra manter identidade -->
+                                <div class="absolute inset-0 bg-black/40"></div>
+                                <!-- badge continua -->
                                 <div class="absolute top-4 right-4">
-                                    <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold" style="background: #a855f7; color: #fff;">Este Site</span>
+                                    <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold" style="background: #22c55e; color: #fff;">Em Desenvolvimento</span>
                                 </div>
                             </div>
                             <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2">Portfólio Pessoal</h3>
-                                <p class="text-sm mb-4" style="color: #a1a1aa;">Este próprio site que você está navegando! Design moderno, responsivo e 100% funcional, rodando sem dependências externas.</p>
+                                <h3 class="text-xl font-bold mb-2">CondoConnect</h3>
+                                <p class="text-sm mb-4" style="color: #a1a1aa;">Sistema completo de gerenciamento condominial, desenvolvido para administração de condomínios residenciais ou comerciais, com fluxo otimizado para gestão financeira, comunicação de avisos e registro de ocorrências.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">HTML</span> <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">CSS</span> <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">JavaScript</span> <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Tailwind</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Python</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Flask</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">HTML</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">CSS</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Javascript</span>
                                 </div>
-                                <div class="flex gap-3"><a href="https://github.com/ivysonthauan" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all hover:bg-white/10" style="border: 1px solid rgba(255,255,255,0.2);">
-                                    <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                    </svg> Código </a>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/Ivysonin/Condo_Connect" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all hover:bg-white/10" style="border: 1px solid rgba(255,255,255,0.2);">
+                                        <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                        </svg> Código 
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Projeto 3 - To-Do List -->
+                        <div class="gradient-border rounded-2xl overflow-hidden card-hover" style="background: #131316;">
+                            <div class="h-48 relative overflow-hidden">
+                                <img  src="src/img/projetos/to-do.png" alt="To-Do List" class="w-full h-full object-cover"/>
+                                <!-- overlay sutil pra manter identidade -->
+                                <div class="absolute inset-0 bg-black/40"></div>
+                                <!-- badge continua -->
+                                <div class="absolute top-4 right-4 z-10">
+                                    <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold"
+                                        style="background: #3b82f6; color: #fff;">
+                                        Concluído
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">To-Do List</h3>
+                                <p class="text-sm mb-4" style="color: #a1a1aa;">Site de lista de tarefas simples e eficiente, desenvolvido para organizar compromissos e metas do dia a dia, com foco em produtividade, clareza e experiência prática de uso.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Python</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Flask</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">HTML</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">CSS</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <a href="https://github.com/Ivysonin/to-do_list" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all hover:bg-white/10" style="border: 1px solid rgba(255,255,255,0.2);">
+                                        <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                        </svg> Código 
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Projeto 4 - Um Toque de Mágica -->
+                        <div class="gradient-border rounded-2xl overflow-hidden card-hover" style="background: #131316;">
+                            <div class="h-48 relative overflow-hidden">
+                                <img  src="src/img/projetos/um_toque_magica.png" alt="Um Toque de Mágica" class="w-full h-full object-cover"/>
+                                <!-- overlay sutil pra manter identidade -->
+                                <div class="absolute inset-0 bg-black/40"></div>
+                                <!-- badge continua -->
+                                <div class="absolute top-4 right-4 z-10">
+                                    <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold"
+                                        style="background: #3b82f6; color: #fff;">
+                                        Concluído
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">Um Toque de Mágica - Juliana Costa</h3>
+                                <p class="text-sm mb-4" style="color: #a1a1aa;">Landing page institucional premium para empresa de decoração de festas e eventos, com foco em elegância, conversão e identidade visual sofisticada.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">HTML</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">CSS</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">Javascript</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <span class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold" style="color: #a1a1aa;">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                    </svg> Projeto Privado </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Projeto 5 - Link na bio -->
+                        <div class="gradient-border rounded-2xl overflow-hidden card-hover" style="background: #131316;">
+                            <div class="h-48 relative overflow-hidden">
+                                <img  src="src/img/projetos/link_bio.png" alt="Sistema de Agendamento de Nails Designer" class="w-full h-full object-cover"/>
+                                <!-- overlay sutil pra manter identidade -->
+                                <div class="absolute inset-0 bg-black/40"></div>
+                                <!-- badge continua -->
+                                <div class="absolute top-4 right-4 z-10">
+                                    <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold"
+                                        style="background: #3b82f6; color: #fff;">
+                                        Concluído
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">Link na Bio</h3>
+                                <p class="text-sm mb-4" style="color: #a1a1aa;">Página de apresentação digital personalizada para concentrar e organizar todos os links de uma pessoa, com foco em praticidade, identidade visual moderna e fácil acesso às principais conexões online.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">HTML</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">CSS</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">JavaScript</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <span class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold" style="color: #a1a1aa;">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                    </svg> Projeto Privado </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Projeto 6 - Declaração de amor -->
+                        <div class="gradient-border rounded-2xl overflow-hidden card-hover" style="background: #131316;">
+                            <div class="h-48 relative overflow-hidden">
+                                <img  src="src/img/projetos/declaração.png" alt="Declaração de amor" class="w-full h-full object-cover"/>
+                                <!-- overlay sutil pra manter identidade -->
+                                <div class="absolute inset-0 bg-black/40"></div>
+                                <!-- badge continua -->
+                                <div class="absolute top-4 right-4 z-10">
+                                    <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold"
+                                        style="background: #3b82f6; color: #fff;">
+                                        Concluído
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">Declaração de amor</h3>
+                                <p class="text-sm mb-4" style="color: #a1a1aa;">Site interativo para declarações de amor, criado para transmitir sentimentos de forma única e envolvente, com foco em romantismo, personalização e experiência emocional marcante.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">HTML</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">CSS</span>
+                                    <span class="project-tag px-3 py-1 rounded-full text-xs font-mono">JavaScript</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <span class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold" style="color: #a1a1aa;">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                    </svg> Projeto Privado </span>
                                 </div>
                             </div>
                         </div>
@@ -487,14 +564,31 @@
                                 </div>
                                 <div class="flex-1">
                                     <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
-                                        <h3 class="text-lg sm:text-xl font-bold">Desenvolvimento Back-end e APIs</h3><span class="px-3 py-1 rounded-full text-xs font-mono" style="background: rgba(220, 38, 38, 0.2); color: #f87171;">2024</span>
+                                        <h3 class="text-lg sm:text-xl font-bold">Programador Full Stack</h3>
+                                        <span class="px-3 py-1 rounded-full text-xs font-mono" style="background: rgba(220, 38, 38, 0.2); color: #f87171;">2025</span>
                                     </div>
                                     <p class="font-mono text-sm mb-2" style="color: #f87171;">Porto Digital + SENAC</p>
-                                    <p class="text-sm" style="color: #a1a1aa;">Formação técnica com foco em projetos práticos, desenvolvimento de APIs REST, banco de dados e boas práticas de programação.</p>
+                                    <p class="text-sm" style="color: #a1a1aa;">Formação completa em Programador Full Stack, estruturada para desenvolver competências em front-end e back-end, com foco em prática intensiva, projetos reais e preparação para atuação profissional versátil no mercado de tecnologia.</p>
                                 </div>
                             </div>
                         </div>
                         <!-- Cursos Complementares -->
+                         <div class="gradient-border rounded-2xl p-6 sm:p-8 card-hover" style="background: #131316;">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(220, 38, 38, 0.2);">
+                                    <svg class="w-6 h-6" style="color: #f87171;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                                        <h3 class="text-lg sm:text-xl font-bold">Lógica de Programação</h3>
+                                        <span class="px-3 py-1 rounded-full text-xs font-mono" style="background: rgba(220, 38, 38, 0.2); color: #f87171;">2025</span>
+                                    </div>
+                                    <p class="font-mono text-sm mb-2" style="color: #f87171;">Porto Digital + SENAC</p>
+                                    <p class="text-sm" style="color: #a1a1aa;">Estruturado para desenvolver raciocínio computacional desde os conceitos básicos até a construção de algoritmos eficientes, com foco em clareza, resolução de problemas e fundamentos essenciais para qualquer linguagem de programação.</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="gradient-border rounded-2xl p-6 sm:p-8 card-hover" style="background: #131316;">
                             <div class="flex items-start gap-4">
                                 <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(220, 38, 38, 0.2);">
@@ -503,10 +597,27 @@
                                 </div>
                                 <div class="flex-1">
                                     <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
-                                        <h3 class="text-lg sm:text-xl font-bold">Lógica Matemática e de Programação</h3><span class="px-3 py-1 rounded-full text-xs font-mono" style="background: rgba(220, 38, 38, 0.2); color: #f87171;">2024</span>
+                                        <h3 class="text-lg sm:text-xl font-bold">Lógica Matemática e de Programação</h3>
+                                        <span class="px-3 py-1 rounded-full text-xs font-mono" style="background: rgba(220, 38, 38, 0.2); color: #f87171;">2024</span>
                                     </div>
-                                    <p class="font-mono text-sm mb-2" style="color: #f87171;">CESAR School - TrilhaTec PE</p>
+                                    <p class="font-mono text-sm mb-2" style="color: #f87171;">Florescendo Talentos - CESAR School</p>
                                     <p class="text-sm" style="color: #a1a1aa;">Fundamentos de lógica de programação, algoritmos, estruturas de dados e resolução de problemas computacionais.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gradient-border rounded-2xl p-6 sm:p-8 card-hover" style="background: #131316;">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(220, 38, 38, 0.2);">
+                                    <svg class="w-6 h-6" style="color: #f87171;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                                        <h3 class="text-lg sm:text-xl font-bold">Programação PYTHON do zero a inteligência artificial</h3>
+                                        <span class="px-3 py-1 rounded-full text-xs font-mono" style="background: rgba(220, 38, 38, 0.2); color: #f87171;">2026</span>
+                                    </div>
+                                    <p class="font-mono text-sm mb-2" style="color: #f87171;">Udemy</p>
+                                    <p class="text-sm" style="color: #a1a1aa;">Fundamentos de lógica de programação, algoritmos, estruturas de dados e resolução de problemas computacionais, evoluindo para manipulação de dados, desenvolvimento de aplicações e bibliotecas avançadas.</p>
                                 </div>
                             </div>
                         </div>
@@ -549,7 +660,7 @@
                     <div class="text-center mb-16">
                         <span class="inline-block font-mono text-sm px-4 py-2 rounded-full mb-6" style="background: rgba(220, 38, 38, 0.15); border: 1px solid rgba(220, 38, 38, 0.3); color: #f87171;"> // Vamos Conversar </span>
                         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Entre em <span class="gradient-text">Contato</span></h2>
-                        <p class="text-lg" style="color: #a1a1aa;">Tem um projeto em mente? Vamos transformar sua ideia em realidade!</p>
+                        <p class="text-lg" style="color: #a1a1aa;">Está enfrentando dificuldades para encontrar o talento certo? Eu posso ajudar a resolver isso.</p>
                     </div>
                     <div class="grid lg:grid-cols-5 gap-8">
                         <!-- Info Cards -->
@@ -568,8 +679,9 @@
                             </div>
                             <div class="gradient-border rounded-xl p-5 card-hover" style="background: #131316;">
                                 <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background: rgba(220, 38, 38, 0.2);">
-                                        <svg class="w-5 h-5" style="color: #f87171;" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                    <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background: rgba(34, 197, 94, 0.2);">
+                                        <svg class="w-5 h-5" style="color:#22c55e;" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                                         </svg>
                                     </div>
                                     <div>
@@ -580,13 +692,17 @@
                             </div>
                             <div class="gradient-border rounded-xl p-5 card-hover" style="background: #131316;">
                                 <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background: rgba(220, 38, 38, 0.2);">
-                                        <svg class="w-5 h-5" style="color: #f87171;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    <div class="w-12 h-12 rounded-lg flex items-center justify-center"
+                                        style="background: rgba(10, 102, 194, 0.2);">
+                                        <svg class="w-5 h-5" fill="currentColor" style="color:#0a66c2;" viewBox="0 0 24 24">
+                                            <path d="M22.23 0H1.77C.79 0 0 .774 0 1.727v20.545C0 23.226.79 24 1.77 24h20.46C23.2 24 24 23.226 24 22.273V1.727C24 .774 23.2 0 22.23 0zM7.06 20.452H3.56V9h3.5v11.452zM5.31 7.433a2.03 2.03 0 110-4.058 2.03 2.03 0 010 4.058zM20.452 20.452h-3.5v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.94v5.666h-3.5V9h3.36v1.561h.047c.468-.888 1.612-1.823 3.316-1.823 3.547 0 4.205 2.335 4.205 5.368v6.346z"/>
                                         </svg>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold">Disponibilidade</h4>
-                                        <p class="text-sm" style="color: #a1a1aa;">Seg-Sex, 9h às 18h</p>
+                                        <h4 class="font-semibold">LinkedIn</h4>
+                                        <a href="https://www.linkedin.com/in/ivysonin/" target="_blank" rel="noopener noreferrer" class="text-sm hover:underline" style="color:#a1a1aa;">
+                                            Perfil profissional
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -626,24 +742,49 @@
         </main>
 
         <!-- Footer -->
-        <footer class="relative z-10 py-8 px-4 border-t" style="border-color: rgba(255,255,255,0.1); background: rgba(10, 10, 11, 0.8);">
-            <div class="max-w-6xl mx-auto">
-                <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div class="flex items-center gap-2">
-                        <span class="font-mono text-lg font-bold gradient-text">&lt;IT/&gt;</span>
-                        <span class="text-sm" style="color: #a1a1aa;">© 2025 Ivyson Thauan</span>
-                    </div>
-                    <div class="flex items-center gap-4"><a id="footer-github" href="https://github.com/ivysonthauan" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg hover:bg-white/10 transition-all" aria-label="GitHub">
-                        <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg></a>
-                        <a id="footer-linkedin" href="https://linkedin.com/in/ivysonthauan" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg hover:bg-white/10 transition-all" aria-label="LinkedIn">
-                            <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                            </svg>
-                        </a>
-                    </div>
+        <footer class="relative z-10 py-10 px-4 border-t" style="border-color: rgba(255,255,255,0.1); background: rgba(10, 10, 11, 0.8);">
+            <div class="max-w-6xl mx-auto space-y-6">
+                <!-- Frase -->
+                <p class="text-center text-sm sm:text-base" style="color:#a1a1aa;">
+                    Aberto a projetos, freelas e boas conversas sobre tecnologia.
+                </p>
+                <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+
+                <!-- Brand -->
+                <div class="flex items-center gap-2">
+                    <span class="font-mono text-lg font-bold gradient-text">&lt;IT/&gt;</span>
+                    <span class="text-sm text-zinc-400">© 2026 Ivyson Thauan</span>
                 </div>
+
+                <!-- CTA + Social -->
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <!-- Baixar CV -->
+                    <a href="src/docs/Ivyson Thauan.pdf" download class="px-8 py-4 rounded-xl font-semibold text-lg border-2 border-red-600 hover:bg-red-600/10 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(220,38,38,0.4)] transition-all flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"/>
+                        </svg>
+                        Baixar CV
+                    </a>
+                    <!-- Email -->
+                    <a id="email-link" href="mailto:ivysonthauan4@gmail.com" class="p-3 rounded-xl hover:bg-white/10 transition-all hover:scale-110" aria-label="Email">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </a>
+                    <!-- GitHub -->
+                    <a id="footer-github" href="https://github.com/ivysonthauan" target="_blank" class="p-3 rounded-xl hover:bg-white/10 transition-all hover:scale-110" aria-label="GitHub">
+                        <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a id="footer-linkedin" href="https://linkedin.com/in/ivysonthauan" target="_blank" class="p-3 rounded-xl hover:bg-white/10 transition-all hover:scale-110" aria-label="LinkedIn">
+                        <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
             </div>
         </footer>
     </div>

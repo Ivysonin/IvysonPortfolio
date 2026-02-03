@@ -54,6 +54,7 @@ html {
 .gradient-border::before {
     content: '';
     position: absolute;
+    pointer-events: none;
     inset: 0;
     padding: 1px;
     background: linear-gradient(135deg, #dc2626, #7f1d1d, #dc2626);
