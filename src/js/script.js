@@ -121,19 +121,32 @@ const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const closeMenuBtn = document.getElementById('close-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+const overlay = document.getElementById('menu-overlay');
 
 function openMobileMenu() {
     mobileMenu.classList.add('open');
+    overlay.classList.add('active');
 }
 
 function closeMobileMenu() {
     mobileMenu.classList.remove('open');
+    overlay.classList.remove('active');
 }
 
+overlay.addEventListener('click', closeMobileMenu);
 mobileMenuBtn.addEventListener('click', openMobileMenu);
 closeMenuBtn.addEventListener('click', closeMobileMenu);
 mobileNavLinks.forEach(link => {
     link.addEventListener('click', closeMobileMenu);
+});
+
+// Fecha ao clicar fora do menu
+document.addEventListener('click', (event) => { 
+    const isClickInsideMenu = mobileMenu.contains(event.target); 
+    const isClickOnButton = mobileMenuBtn.contains(event.target); 
+    if (!isClickInsideMenu && !isClickOnButton) { 
+        closeMobileMenu(); 
+    } 
 });
 
 // Contact form submission

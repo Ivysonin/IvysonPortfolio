@@ -250,3 +250,26 @@ input:focus, textarea:focus {
 .mobile-menu.open {
     transform: translateX(0);
 }
+
+#menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); /* escurece levemente */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 40;
+}
+
+/* menu acima do blur */
+#mobile-menu {
+    z-index: 50;
+}
+
+/* quando ativo */
+#menu-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
